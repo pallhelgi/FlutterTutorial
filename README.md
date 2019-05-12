@@ -1,6 +1,7 @@
 # myapp
 
 A new Flutter application.
+A flutter tutorial for beginners by https://www.youtube.com/watch?v=GLSG_Wh_YWc&t=6887s
 
 ## Getting Started
 
