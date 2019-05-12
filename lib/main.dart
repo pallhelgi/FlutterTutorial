@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './product_manager.dart';
+
 void main() {
   //flutter reads from main function in main.dart to start the app
   // runApp is imported from material.dart, it takes widget as an argument
@@ -9,15 +11,7 @@ void main() {
 
 // void main () => runApp(MyApp()); Is also allowed if the statement is short
 
-class MyApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return _MyAppState();
-  }
-}
-
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   // This is the top most base widget
   // MyApp extends StatelessWidget from the flutter package
   // Because of that build function needs to be implemented
@@ -40,20 +34,7 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: Text('EasyList'),
         ),
-        body: Column(children: [
-          Container(
-              margin: EdgeInsets.all(10.0), //10.0 pixel edge
-              child:
-                  RaisedButton(onPressed: () {}, child: Text('Add Product'))),
-          Card(
-            child: Column(
-              children: <Widget>[
-                Image.asset('assets/food.jpg'),
-                Text('Food Paradise')
-              ],
-            ),
-          )
-        ]),
+        body: ProductManager(),
       ),
     );
   }
