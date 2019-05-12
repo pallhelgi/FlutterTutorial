@@ -9,7 +9,15 @@ void main() {
 
 // void main () => runApp(MyApp()); Is also allowed if the statement is short
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp> {
   // This is the top most base widget
   // MyApp extends StatelessWidget from the flutter package
   // Because of that build function needs to be implemented
@@ -32,14 +40,20 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('EasyList'),
         ),
-        body: Card(
-          child: Column(
-            children: <Widget>[
-              Image.asset('assets/food.jpg'),
-              Text('Food Paradise')
-            ],
-          ),
-        ),
+        body: Column(children: [
+          Container(
+              margin: EdgeInsets.all(10.0), //10.0 pixel edge
+              child:
+                  RaisedButton(onPressed: () {}, child: Text('Add Product'))),
+          Card(
+            child: Column(
+              children: <Widget>[
+                Image.asset('assets/food.jpg'),
+                Text('Food Paradise')
+              ],
+            ),
+          )
+        ]),
       ),
     );
   }
