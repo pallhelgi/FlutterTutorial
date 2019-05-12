@@ -30,11 +30,12 @@ class MyApp extends StatelessWidget {
     // AppBar has the argument option for title (hover over AppBar to see argument options)
     // Title can take Text as argument and Text takes string as argument
     return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.deepOrange),
       home: Scaffold(
         appBar: AppBar(
           title: Text('EasyList'),
         ),
-        body: ProductManager(),
+        body: ProductManager('Food Tester'),
       ),
     );
   }
