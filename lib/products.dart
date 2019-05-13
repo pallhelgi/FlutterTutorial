@@ -6,7 +6,8 @@ class Products extends StatelessWidget {
   final List<String> products;
 
   Products(
-      this.products); // By using this.products then incoming products list will equal this products list
+      [this.products =
+          const []]); // By using this.products then incoming products list will equal this products list
 
   @override
   Widget build(BuildContext context) {
